@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>อวยพรวันเกิด</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        h1 {
+            color: #5677fc;
+        }
+        input[type="text"] {
+            padding: 10px;
+            font-size: 16px;
+            margin: 10px 0;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .message {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>HAPPY BIRTHDAY MESSAGE</h1>
+    <input type="text" id="nameInput" placeholder="กรอกชื่อของคุณที่นี่">
+    <br>
+    <button onclick="showBirthdayMessage()">รับคำอวยพร</button>
+
+    <div class="message" id="message"></div>
+
+    <script>
+        function showBirthdayMessage() {
+            var name = document.getElementById("nameInput").value;
+            var message = "สุขสันต์วันเกิด " + name + "!สุขสันต์วันเกิดครับไอ่แก่มีความสุขมากๆ ขอให้มีแต่รอยยิ้มอยู่เสมอ เจอแต่คนใจดี ดูแลสุขภาพด้วย!";
+            document.getElementById("message").innerText = message;
+        }
+    </script>
+
+</body>
+</html>
